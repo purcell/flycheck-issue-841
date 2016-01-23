@@ -1,0 +1,7 @@
+(defun test-flycheck-841 ()
+  (interactive)
+  (find-file "valid.ledger")
+  (end-of-buffer)
+  (insert-file-contents "invalid.ledger")
+  (diff-hl-mode 1)
+  (flycheck-mode 1))
